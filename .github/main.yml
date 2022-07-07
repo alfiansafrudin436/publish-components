@@ -16,6 +16,6 @@ jobs:
         run: npm run build 
       - name: Semantic release
         env:
-          GITHUB_TOKEN: ${{ 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 }}
-          NPM_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
