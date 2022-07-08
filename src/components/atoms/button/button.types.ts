@@ -1,3 +1,5 @@
+type TButtonTypes = 'primary' | 'secondary'
 export interface IButton {
-    buttonTitle: string
+    buttonTitle?: string
+    types:  TButtonTypes
 }

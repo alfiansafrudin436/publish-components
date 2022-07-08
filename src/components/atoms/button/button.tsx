@@ -1,9 +1,10 @@
 import { IButton } from "./button.types"
+import { StyledButton } from './button.styles'
 
 const Button:React.FC<IButton> = (props:IButton) => {
-    const { buttonTitle } = props
+    const { buttonTitle, types } = props
     return (
-        <button>{buttonTitle}</button>
+        <StyledButton types={types}>{buttonTitle}</StyledButton>
     )
 }
 
