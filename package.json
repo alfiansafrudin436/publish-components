@@ -1,5 +1,5 @@
 {
-  "name": "publish-components",
+  "name": "component-example-npm-publish",
   "version": "0.1.0",
   "private": false,
   "scripts": {
