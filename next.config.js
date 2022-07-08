@@ -13,12 +13,8 @@ const moduleExports = {
     const conf = config
     conf.plugins.push(new webpack.EnvironmentPlugin(localEnv))
     conf.module.rules.push({
-      test: /\.mdx/,
-      use: [
-        {
-          loader: '@mdx-js/loader',
-        },
-      ],
+      test: /\.txt$/,
+      use: 'raw-loader',
     })
     return conf
   },
