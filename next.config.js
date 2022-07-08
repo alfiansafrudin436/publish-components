@@ -13,19 +13,8 @@ const moduleExports = {
     const conf = config
     conf.plugins.push(new webpack.EnvironmentPlugin(localEnv))
     conf.module.rules.push(
-      {
-        test: /\.txt$/,
-        use: 'raw-loader'
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: require.resolve("babel-loader"),
-      },
-      {
-        test: /\.png|svg|jpg|gif$/,
-        use: ["file-loader"],
-      }
+      { test: /\.ts$/, use: 'ts-loader' },
+      { test: /\.tsx$/, use: 'tsx-loader' },
     )
     return conf
   },
