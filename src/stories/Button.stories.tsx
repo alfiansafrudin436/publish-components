@@ -12,6 +12,13 @@ export default {
       control: {
         type: 'text',
       }
+    },
+    types: {
+      defaultValue: 'primary',
+      control: {
+        options: [ 'primary', 'secondary', 'default' ],
+        type: 'select',
+      }
     }
   },
 } as ComponentMeta<typeof Button>
