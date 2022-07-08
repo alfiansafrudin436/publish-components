@@ -13,7 +13,20 @@ const moduleExports = {
     const conf = config
     conf.plugins.push(new webpack.EnvironmentPlugin(localEnv))
     conf.module.rules.push(
-      { test: /\.ts$/, use: 'ts-loader' },
+      { 
+        test: /\.(ts)x?$/, // Just `tsx?` file only
+        use: [
+          // options.defaultLoaders.babel, I don't think it's necessary to have this loader too
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+              experimentalWatchApi: true,
+              onlyCompileBundledFiles: true,
+            },
+          },
+        ],
+      },
     )
     return conf
   },
