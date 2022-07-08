@@ -14,7 +14,6 @@ const moduleExports = {
     conf.plugins.push(new webpack.EnvironmentPlugin(localEnv))
     conf.module.rules.push(
       { test: /\.ts$/, use: 'ts-loader' },
-      { test: /\.tsx$/, use: 'tsx' },
     )
     return conf
   },
