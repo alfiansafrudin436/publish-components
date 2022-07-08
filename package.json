@@ -20,8 +20,7 @@
     "react-dom": "18.2.0",
     "semantic-release": "^19.0.3",
     "styled-components": "^5.3.5",
-    "ts-loader": "^9.3.1",
-    "tsx": "^3.7.1"
+    "ts-loader": "^9.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
